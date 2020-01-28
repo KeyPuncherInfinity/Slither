@@ -4,16 +4,30 @@ var pixel = {
     p2: '"></div>'
 }
 
+var snake = [
+    [15, 30],
+    [15, 29],
+    [15, 28]
+]
+
+var direction = 'right';
+
+
 
 
 function initField(){
-    for(var indexi = 0; indexi < 88; indexi++){
-        for(var indexj = 0; indexj < 30; indexj++){
+    for(var indexi = 0; indexi < 30; indexi++){
+        for(var indexj = 0; indexj < 88; indexj++){
             playField = playField + pixel.p1 + indexi + '.' + indexj + pixel.p2;
         }
     }
 
     document.getElementsByClassName('playField')[0].innerHTML = playField;
-    document.getElementById('id87.29').innerHTML = '<script type="text/javascript">console.log(\'works\');</script>'
-    setInterval(control,300);
+    setInterval(control,100);
+}
+
+function update(){
+    for(var bodyPiece = 0; bodyPiece < snake.length; bodyPiece++){
+            document.getElementById('id' + snake[bodyPiece][0] + '.' + snake[bodyPiece][1]).style.backgroundColor = "blue";
+    }
 }

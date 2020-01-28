@@ -1,5 +1,7 @@
 #up {
     flex-grow: 1;
+    border: 1px red solid;
+
 }
 
 #left_right {
@@ -10,13 +12,23 @@
 
 #down {
     flex-grow: 1;
+    border: 1px red solid;
+
 
 }
 
 #left {
+    flex-grow: 8;
+    border: 1px red solid;
+
+}
+
+#middle {
     flex-grow: 1;
 }
 
 #right {
-    flex-grow: 1;
+    flex-grow: 8;
+    border: 1px red solid;
+
 }
