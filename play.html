@@ -1,0 +1,47 @@
+<!-- 
+    Random project to create a simple game of snake
+ -->
+
+ <!DOCTYPE html>
+
+ <html>
+     <head>
+         <title>
+             Slither | Home
+         </title>
+
+         <script src="play.js" type="text/javascript">
+         </script>
+         <script src="control.js" type="text/javascript">
+         </script>
+
+        <link rel="stylesheet" href="play.css">
+        <link rel="stylesheet" href="pixel.css">
+        <link rel="stylesheet" href="controls.css">
+     </head>
+
+     <body onload="initField()">
+         <div class="playField" >
+
+         </div>
+
+         <div class="control">
+            <div id="up" onmousemove="up()">
+
+            </div>
+            <div id="left_right">
+                <div id="left" onmousemove="left()">
+
+                </div>
+                <div id="right" onmousemove="right()">
+
+                </div>
+
+            </div>
+            <div id="down" onmousemove="down()">
+
+            </div>
+         </div>
+    </body>
+
+ </html>

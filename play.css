@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px red solid;
+    outline: none;
+}
+
+html {
+    border: none;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #0c6121;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.playField {
+    min-height: 85%;
+    max-height: 85%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.control {
+    min-height: 15%;
+    display: flex;
+    flex-direction: column;
+}
