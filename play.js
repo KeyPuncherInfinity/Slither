@@ -6,7 +6,6 @@ var pixel = {
 
 
 
-
 function initField(){
     for(var indexi = 0; indexi < 88; indexi++){
         for(var indexj = 0; indexj < 30; indexj++){
@@ -15,5 +14,6 @@ function initField(){
     }
 
     document.getElementsByClassName('playField')[0].innerHTML = playField;
-
+    document.getElementById('id87.29').innerHTML = '<script type="text/javascript">console.log(\'works\');</script>'
+    setInterval(control,300);
 }

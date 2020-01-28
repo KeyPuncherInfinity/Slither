@@ -5,10 +5,12 @@
 #left_right {
     flex-grow: 1;
     display: flex;
+
 }
 
 #down {
     flex-grow: 1;
+
 }
 
 #left {

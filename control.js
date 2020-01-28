@@ -1,15 +1,48 @@
-function up(){
-        console.log('up');
+var upField = 1;
+var downField = '<div id="down" onmousemove="down()"></div>';
+var midField = '<div id="left_right"><div id="left" onmousemove="left()"></div><div id="right" onmousemove="right()"></div></div>';
+
+
+var direction = 'right';
+
+
+function setUP(){
+        direction = 'up';
 }
 
-function down(){
-        console.log('down');
+
+function setDOWN(){
+        direction = 'down';
 }
 
-function left(){
-        console.log('left');
+
+function setLEFT(){
+        direction = 'left';
 }
 
-function right(){
-        console.log('right');
+
+function setRIGHT(){
+        direction = 'right';
+}
+
+function control(){
+
+
+        switch(direction){
+        case 'up':
+                console.log('up');
+        break;
+
+        case 'down':
+                console.log('down');
+        break;
+
+        case 'left':
+                console.log('left');
+        break;
+
+        case 'right':
+                console.log('right');
+        break;
+        }
 }
