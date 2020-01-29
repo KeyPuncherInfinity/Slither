@@ -18,6 +18,9 @@ var food = [15, 50];
 
 
 function initField(){
+
+    alert('Press TAB to start playing\n w, a, s, d or 8, 4, 5, 6 for controls');
+
     for(var indexi = 0; indexi < 30; indexi++){
         for(var indexj = 0; indexj < 88; indexj++){
             playField = playField + pixel.p1 + indexi + '.' + indexj + pixel.p2;
@@ -27,16 +30,17 @@ function initField(){
     //console.log(screen.width + ' and ' + screen.height);
 
     document.getElementsByClassName('playField')[0].innerHTML = playField;
-    setInterval(control,100);
+    setInterval(control,50);
 }
 
 function update(){
-    for(var bodyPiece = 0; bodyPiece < snake.length; bodyPiece++){
+    for(var bodyPiece = 1; bodyPiece < snake.length; bodyPiece++){
             document.getElementById('id' + snake[bodyPiece][0] + '.' + snake[bodyPiece][1]).style.backgroundColor = "blue";
     }
+    document.getElementById('id' + snake[0][0] + '.' + snake[0][1]).style.backgroundColor = "red";
 
     document.getElementById('id' + food[0] + '.' + food[1]).style.backgroundColor = "black";
-    document.getElementById('middle').innerHTML = '<h1>' + snake.length + '</h1>';
+    document.getElementById('score').innerHTML = snake.length;
 }
 
 
@@ -47,7 +51,6 @@ function foodRandomize(){
     i = Math.floor(i * 29);
     j = Math.floor(j * 87);
 
-    console.log(i + ' ' + j);
 
     food[0] = i;
     food[1] = j;

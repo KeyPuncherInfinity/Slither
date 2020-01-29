@@ -1,3 +1,4 @@
+
 function setUP(){
         if(direction != 'down')
                 direction = 'up';
@@ -84,6 +85,37 @@ function right(){
 
 
 
+function resolveInput(){
+        var input = document.getElementById('input').value;
+
+        switch(input){
+                case 'w':
+                case '8':
+                        setUP();
+                break;
+
+                case 's':
+                case '5':
+                        setDOWN();
+                break;
+
+                case 'a':
+                case '4':
+                        setLEFT();
+                break;
+
+                case 'd':
+                case '6':
+                        setRIGHT();
+                break;
+        }
+
+        document.getElementById('input').value = '';
+}
+
+
+
+
 
 
 
@@ -92,22 +124,18 @@ function control(){
 
         switch(direction){
         case 'up':
-                console.log('up');
                 up();
         break;
 
         case 'down':
-                console.log('down');
                 down();
         break;
 
         case 'left':
-                console.log('left');
                 left();
         break;
 
         case 'right':
-                console.log('right');
                 right();
         break;
         }

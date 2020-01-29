@@ -25,6 +25,7 @@
 
 #middle {
     flex-grow: 1;
+    text-align: center;
 }
 
 #middle > h1 {
@@ -35,4 +36,11 @@
     flex-grow: 8;
     border: 1px red solid;
 
+}
+
+
+#input {
+    max-width: 50px;
+    background-color: #0c6121;
+    border: none;
 }
