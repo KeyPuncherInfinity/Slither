@@ -40,10 +40,23 @@ function update(){
 }
 
 
+function foodRandomize(){
+    var i = Math.random();
+    var j = Math.random();
+
+    i = Math.floor(i * 29);
+    j = Math.floor(j * 87);
+
+    console.log(i + ' ' + j);
+
+    food[0] = i;
+    food[1] = j;
+}
+
 function checkGrow(){
     if(snake[0][0] == food[0] && snake[0][1] == food[1]){    
         last = snake.length - 1;
         snake.push([snake[last][0], snake[last][1]]);
-        //foodRandomize();
+        foodRandomize();
     }   
 }
