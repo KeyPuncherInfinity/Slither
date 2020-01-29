@@ -27,6 +27,10 @@
     flex-grow: 1;
 }
 
+#middle > h1 {
+    text-align: center;
+}
+
 #right {
     flex-grow: 8;
     border: 1px red solid;

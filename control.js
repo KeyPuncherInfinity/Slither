@@ -112,5 +112,7 @@ function control(){
         break;
         }
 
+        
+        checkGrow();
         update();
 }

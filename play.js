@@ -12,7 +12,9 @@ var snake = [
 
 var direction = 'right';
 
+var grow = 0;
 
+var food = [15, 50];
 
 
 function initField(){
@@ -22,6 +24,8 @@ function initField(){
         }
     }
 
+    //console.log(screen.width + ' and ' + screen.height);
+
     document.getElementsByClassName('playField')[0].innerHTML = playField;
     setInterval(control,100);
 }
@@ -30,4 +34,16 @@ function update(){
     for(var bodyPiece = 0; bodyPiece < snake.length; bodyPiece++){
             document.getElementById('id' + snake[bodyPiece][0] + '.' + snake[bodyPiece][1]).style.backgroundColor = "blue";
     }
+
+    document.getElementById('id' + food[0] + '.' + food[1]).style.backgroundColor = "black";
+    document.getElementById('middle').innerHTML = '<h1>' + snake.length + '</h1>';
+}
+
+
+function checkGrow(){
+    if(snake[0][0] == food[0] && snake[0][1] == food[1]){    
+        last = snake.length - 1;
+        snake.push([snake[last][0], snake[last][1]]);
+        //foodRandomize();
+    }   
 }
